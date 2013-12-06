@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FME Preleve</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="num_affaire">Numéro d\'affaire</string>
+    <string name="debit_initial">Débit initial</string>
+    <string name="debit_final">Débit final</string>
+    <string name="client">Client</string>
+    <string name="valider">Valider</string>
+    <string name="title_activity_creation">CreationActivity</string>
+
+</resources>
