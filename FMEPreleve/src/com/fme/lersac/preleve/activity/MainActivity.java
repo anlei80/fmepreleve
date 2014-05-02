@@ -1,7 +1,9 @@
-package com.example.fmepreleve;
+package com.fme.lersac.preleve.activity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.fmepreleve.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -42,7 +44,7 @@ public class MainActivity extends Activity {
 	        public void onClick(View v) {
 	          // Le premier paramètre est le nom de l'activité actuelle
 	          // Le second est le nom de l'activité de destination
-	          Intent secondeActivite = new Intent(MainActivity.this, CreationActivity.class);
+	          Intent secondeActivite = new Intent(MainActivity.this, EditActivity.class);
 	          
 	          // On rajoute un extra
 	          //secondeActivite.putExtra(AGE, 31);

@@ -1,11 +1,13 @@
-package com.example.fmepreleve;
+package com.fme.lersac.preleve.activity;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,8 +28,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.fmepreleve.R;
+import com.fme.lersac.preleve.model.Dossier;
+import com.fme.lersac.preleve.model.VELP;
 import com.google.gson.Gson;
 
 public class CreationActivity extends Activity {
@@ -40,7 +45,7 @@ public class CreationActivity extends Activity {
 	
 	private Button saveClick = null;
 	
-	String url = "http://10.170.3.59:8080/fmeIntranet/seam/resource/rest/preleve/preleveur/Nicolas";
+	String url = "http://www.fme-lersac.com/fmeIntranet/seam/resource/rest/preleve/savedossier";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +121,7 @@ public class CreationActivity extends Activity {
 		vlep.setClient("TEST CLIENT");
 		Gson gson = new Gson();
 		String text = gson.toJson(vlep);
-		
+		Log.i("Info", text);
 		JSONObject param = new JSONObject();
 		
 		try {
@@ -124,26 +129,41 @@ public class CreationActivity extends Activity {
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}*/ 
 		
 		RequestQueue queue = Volley.newRequestQueue(this);
 		
-		JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-			
+		
+		StringRequest jsObjRequest = new StringRequest(Request.Method.POST, url, //param, 
+					new Response.Listener<String>() {
 			            @Override
-			            public void onResponse(JSONObject response) {
+			            public void onResponse(String response) {
 				                // TODO Auto-generated method stub
+			            	Log.i("Reponse ", response.toString());
 			                txtDisplay.setText("Response => "+response.toString());
 			                //findViewById(R.id.progressBar1).setVisibility(View.GONE);
-				            }
-			        }, new Response.ErrorListener() {
+			            }
+			        }, 
+			        
+			        new Response.ErrorListener() {
+			            @Override
+			            public void onErrorResponse(VolleyError error) {
+		                // TODO Auto-generated method stub
 			 
-				            @Override
-				            public void onErrorResponse(VolleyError error) {
-			                // TODO Auto-generated method stub
-				 
-				            }
-				        });
+			            }
+			        }) {
+			
+			
+			   protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
+			        Map<String, String> params = new HashMap<String, String>();
+					VELP vlep = new VELP();
+					vlep.setClient("TEST CLIENT");
+					Gson gson = new Gson();
+					String text = gson.toJson(vlep);
+			        params.put("dossier", text);
+			        return params;
+			    };
+		};
 				 
 			        queue.add(jsObjRequest);
 		 

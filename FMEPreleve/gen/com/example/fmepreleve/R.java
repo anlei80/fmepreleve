@@ -24,17 +24,22 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
+        public static final int action_settings=0x7f080011;
         public static final int annuler=0x7f080008;
+        public static final int btnRecherche=0x7f08000f;
         public static final int client=0x7f080001;
+        public static final int clientLabel=0x7f08000d;
+        public static final int clientRecherche=0x7f08000e;
         public static final int create=0x7f08000a;
         public static final int debit_final=0x7f080004;
         public static final int debit_initial=0x7f080002;
         public static final int listDossier=0x7f080009;
-        public static final int nom_preleveur=0x7f08000b;
         public static final int num_affaire=0x7f080000;
+        public static final int pager=0x7f080010;
+        public static final int personnelNomLabel=0x7f08000c;
+        public static final int preleveur=0x7f08000b;
         public static final int savegarder=0x7f080007;
-        public static final int setting=0x7f08000d;
+        public static final int setting=0x7f080012;
         public static final int textView1=0x7f080003;
         public static final int textView2=0x7f080005;
         public static final int valider=0x7f080006;
@@ -43,6 +48,12 @@ public final class R {
         public static final int activity_creation=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_setting=0x7f030002;
+        public static final int client_auto=0x7f030003;
+        public static final int edit_divers=0x7f030004;
+        public static final int edit_generale=0x7f030005;
+        public static final int edit_main=0x7f030006;
+        public static final int edit_prelevement=0x7f030007;
+        public static final int personnel_auto=0x7f030008;
     }
     public static final class menu {
         public static final int creation=0x7f070000;
@@ -51,13 +62,15 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int client=0x7f050006;
+        public static final int client=0x7f050009;
         public static final int debit_final=0x7f050005;
         public static final int debit_initial=0x7f050004;
         public static final int hello_world=0x7f050002;
         public static final int num_affaire=0x7f050003;
-        public static final int title_activity_creation=0x7f050008;
-        public static final int valider=0x7f050007;
+        public static final int preleveur=0x7f050008;
+        public static final int recherche=0x7f05000a;
+        public static final int title_activity_creation=0x7f050007;
+        public static final int valider=0x7f050006;
     }
     public static final class style {
         /** 

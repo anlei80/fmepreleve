@@ -7,8 +7,10 @@
     <string name="num_affaire">Numéro d\'affaire</string>
     <string name="debit_initial">Débit initial</string>
     <string name="debit_final">Débit final</string>
-    <string name="client">Client</string>
     <string name="valider">Valider</string>
     <string name="title_activity_creation">CreationActivity</string>
+    <string name="preleveur">Préleveur</string>
+    <string name="client">Client</string>
+    <string name="recherche">Recherche</string>
 
 </resources>

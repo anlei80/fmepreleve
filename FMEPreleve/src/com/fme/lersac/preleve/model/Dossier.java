@@ -1,4 +1,4 @@
-package com.example.fmepreleve;
+package com.fme.lersac.preleve.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
