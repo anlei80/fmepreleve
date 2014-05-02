@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+     
+    <TextView android:id="@+id/clientLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/client"/>
+    
+	<EditText 
+      	android:id="@+id/clientRecherche"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"   	
+  		android:inputType="text"
+  		android:layout_toRightOf="@+id/clientLabel"/>
+	
+	<Button android:id="@+id/btnRecherche" android:text="@string/recherche"
+ 		android:layout_width="wrap_content" android:layout_height="wrap_content"
+ 		android:layout_below="@id/clientRecherche" android:layout_alignRight="@id/clientRecherche"/>
+ 		
+</RelativeLayout>
